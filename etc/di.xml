@@ -1,0 +1,35 @@
+<?xml version="1.0" ?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+    xsi:noNamespaceSchemaLocation="urn:magento:framework:App/etc/config.xsd">
+
+    <type name="Magento\Catalog\Model\Cart">
+        <plugin name="afterAddtoCart" type="YMSLI\Demo\Plugin\Cart" sortOrder="1"/>
+    </type>
+    
+    <type name="Magento\Catalog\Model\Product">
+        <plugin name="afterProductName" type="YMSLI\Demo\Plugin\Product" sortOrder="1"/>
+    </type>
+
+    
+
+  <!--  <preference for="Magento\Catalog\Model\Product" type="YMSLI2\Demo\Model\Product"/>  -->
+
+    <!-- Logger -->
+    <!--
+    <type name="YMSLI2\Demo\Logger\Handler">
+        <arguments>
+            <argument name="filesystem" xsi:type="object">Magento\Framework\Filesystem\Driver\File</argument>
+        </arguments>   
+    </type>
+
+    <type name="YMSLI2\Demo\Logger\Customlogger">
+        <arguments>
+            <argument name="name" xsi:type="string">customLogFile</argument>
+            <argument name="handlers" xsi:type="array">
+                <item name="system" xsi:type="object">YMSLI2\Demo\Logger\Handler</item>
+            </argument>
+        </arguments>
+    </type>
+    -->
+
+</config>
